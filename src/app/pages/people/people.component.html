@@ -1,0 +1,31 @@
+<div class="container" style="padding-top: 100px;">
+  <div class="row justify-content-center">
+    <h1 class="text-center">Personas</h1>
+  </div>
+  <div class="row justify-content-center">
+    <div *ngFor="let item of people.results" class="col-4">
+      <div class="card">
+        <div class="card-header">
+          <h4>{{item.name}}</h4>
+        </div>
+        <div class="card-body">
+          <div class="container-fluid">
+            <div class="row">
+              Genero: {{item.gender}}
+            </div>
+            <div class="row">
+              <p>Películas:</p><br>
+              <p *ngFor="let film of item.films2">
+                {{film.title}} <br>
+                {{film.opening_crawl}} <br>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+
+  </div>
+</div>

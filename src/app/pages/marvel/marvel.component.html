@@ -1,0 +1,29 @@
+<div class="container" style="padding-top: 100px;">
+  <div class="row justify-content-center">
+    <h1 class="text-center">Marvel</h1>
+  </div>
+  <div class="row justify-content-center">
+    <button style="width: 200px;" (click)="addMarvel()" class="btn btn-danger">Agregar</button>
+    <button style="width: 200px;" (click)="updateMarvel()" class="btn btn-danger">Actualizar</button>
+  </div>
+  <div class="row justify-content-center">
+    <div *ngFor="let item of persons" class="col-4">
+      <div class="card" (click)="goTo(item.id, item.heroe.name)" style="cursor: pointer;">
+        <div class="card-header">
+          <h4>{{item.heroe.name}}</h4>
+        </div>
+        <div class="card-body">
+          <div class="container-fluid">
+            <div class="row justify-content-center">
+              <p>{{item.heroe.description}}</p>
+            </div>
+            <div class="row justify-content-center">
+              <img [src]="item.heroe.picture" alt="">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
